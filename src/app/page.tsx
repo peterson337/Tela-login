@@ -18,22 +18,6 @@ export default function Home() {
     string | ArrayBuffer | null
   >("./img/img-login2.png");
 
-  const changeImage = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-
-    if (file) {
-      const reader = new FileReader();
-      reader.readAsDataURL(file);
-
-      //prettier-ignore
-      reader.onloadend = () => setImageBackgroundLogin(reader.result);
-    }
-
-    //prettier-ignore
-    localStorage.setItem("imageBackgroundLogin", JSON.stringify(imageBackgroundLogin));
-  };
-  console.log(imageBackgroundLogin);
-
   const logar = () => {
     if (
       userName.current === "" ||
@@ -60,15 +44,8 @@ export default function Home() {
 
   return (
     //prettier-ignore
-    <section className={`${styleTelaLogin.imgLogin} bg-[url(${imageBackgroundLogin})]`}
-    // style={{ backgroundImage: `url(${imageBackgroundLogin})` }}
+    <section className={styleTelaLogin.imgLogin} 
     >
-
-      <input
-        type="file"
-        onChange={changeImage}
-        className="absolute bottom-5 right-5"
-      />
       <div className={styleTelaLogin.divLogin}>
         <h3 className={styleTelaLogin.titleLogin}>Login</h3>
         <label>Digite o seu nome</label>

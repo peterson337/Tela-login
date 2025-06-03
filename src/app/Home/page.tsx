@@ -14,8 +14,7 @@ export default function page() {
   const [isLoading, setIsLoading] = React.useState(true);
   const [wallpapers, setWallpapers] = React.useState<Wallpaper[]>([]);
 
-  React.useEffect(() => {
-    // setTimeout(() => {
+  setTimeout(() => {
     if (isLoading) {
       setWallpapers([
         {
@@ -47,8 +46,7 @@ export default function page() {
 
       setIsLoading(false);
     }
-    // }, 3000);
-  }, []);
+  }, 3000);
 
   return (
     <>

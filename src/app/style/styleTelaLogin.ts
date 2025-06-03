@@ -3,7 +3,7 @@ const inputTelaLogin = `p-2 outline-none border border-gray-300 rounded-md mb-2`
 
 const styleTelaLogin = {
   imgLogin: `${stylePadrao} flex flex-col items-center justify-center h-screen  
-    bg-no-repeat bg-cover  w-screen`,
+    bg-no-repeat bg-cover  w-screen bg-[url(./img/img-login2.png)] `,
 
   divLogin: `${stylePadrao} gap-2 bg-whitebg-white/30 backdrop-blur-md rounded shadow-lg 
     border border-white/20 text-white md:w-[20rem] w-[18rem] p-4  rounded-xl`,
