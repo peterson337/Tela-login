@@ -4,7 +4,6 @@ import styleTelaLogin from "./style/styleTelaLogin";
 import { FaEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { useRouter } from "next/navigation";
-import { json } from "stream/consumers";
 
 export default function Home() {
   const router = useRouter();
@@ -13,10 +12,6 @@ export default function Home() {
   const password = React.useRef("");
 
   const [isShowPassword, setIsShowPassword] = React.useState(false);
-
-  const [imageBackgroundLogin, setImageBackgroundLogin] = React.useState<
-    string | ArrayBuffer | null
-  >("./img/img-login2.png");
 
   const logar = () => {
     if (

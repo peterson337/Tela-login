@@ -10,7 +10,7 @@ type Wallpaper = {
   alt: string;
 };
 
-export default function page() {
+export default function Page() {
   const [isLoading, setIsLoading] = React.useState(true);
   const [wallpapers, setWallpapers] = React.useState<Wallpaper[]>([]);
 
